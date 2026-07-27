@@ -73,6 +73,17 @@
   width: fit-content;
 }
 
+.dev-badge {
+  display: inline-block;
+  background: #ffb020;
+  color: #1a1a1a;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
 .project-title {
   font-size: 1.05rem;
   font-weight: 600;
@@ -132,6 +143,26 @@
   color: #475569;
   font-family: monospace;
   font-style: italic;
+}
+
+.project-card {
+  position: relative;
+}
+
+.card-arrow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 1rem;
+  color: #444;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-card:hover .card-arrow {
+  color: #ffffff;
+  transform: translate(2px, -2px);
 }
 
 @media (max-width: 768px) {

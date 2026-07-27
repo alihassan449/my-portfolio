@@ -8,7 +8,7 @@ function Footer() {
         &nbsp;·&nbsp;
         <span className="footer-mono">// deployed on</span> Netlify
       </p>
-      <p className="footer-copy">© 2025 YourName. All rights reserved.</p>
+      <p className="footer-copy">© 2025 Ali Hassan. All rights reserved.</p>
     </footer>
   )
 }
