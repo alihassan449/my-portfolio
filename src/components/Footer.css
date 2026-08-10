@@ -1,16 +1,20 @@
 .footer {
-  background: #09090f;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
   padding: 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .footer-text {
   font-size: 13px;
-  color: #6b6b80;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }
 
 .footer-mono {
@@ -20,5 +24,6 @@
 
 .footer-copy {
   font-size: 12px;
-  color: #3a3a4a;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }

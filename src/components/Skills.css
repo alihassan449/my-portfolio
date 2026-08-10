@@ -1,6 +1,7 @@
 .skills {
-  background: #020617;
+  background: var(--bg);
   padding: 6rem 2rem;
+  transition: background 0.3s ease;
 }
 
 .skills-container {
@@ -19,17 +20,19 @@
 h2 {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
-  color: #e8e8f0;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
 }
 
 .section-sub {
-  color: #94a3b8;
+  color: var(--text-secondary);
   font-size: 1rem;
   margin-bottom: 3rem;
   max-width: 480px;
   line-height: 1.7;
+  transition: color 0.3s ease;
 }
 
 .skills-grid {
@@ -40,14 +43,15 @@ h2 {
 }
 
 .skill-card {
-  background: #0f172a;
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 1.5rem;
   transition:
     border-color 0.3s,
     transform 0.3s,
-    box-shadow 0.3s;
+    box-shadow 0.3s,
+    background 0.3s ease;
   height: 100%;
   min-height: 180px;
   display: flex;
@@ -82,7 +86,8 @@ h2 {
   font-size: 13px;
   padding: 5px 12px;
   border-radius: 4px;
-  background: #1e293b;
-  border: 1px solid rgba(148, 163, 184, 0.15);
-  color: #cbd5e1;
+  background: var(--tech-badge-bg);
+  border: 1px solid var(--tech-badge-border);
+  color: var(--tech-badge-color);
+  transition: all 0.3s ease;
 }

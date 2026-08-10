@@ -1,0 +1,220 @@
+.timeline {
+  background: var(--bg-secondary);
+  padding: 6rem 2rem;
+  transition: background 0.3s ease;
+}
+
+.timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-list {
+  position: relative;
+  margin-top: 3rem;
+  padding-bottom: 0;
+}
+
+/* ── Each Row ───────────────────────── */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 40px 1fr;
+  gap: 0 1.5rem;
+  margin-bottom: 2.5rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* ── Year ───────────────────────────── */
+.timeline-year {
+  text-align: right;
+  padding-top: 4px;
+}
+
+.timeline-year span {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+/* ── Center Line ────────────────────── */
+.timeline-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: calc(100% + 2.5rem);
+  background: var(--border);
+  transition: background 0.3s ease;
+  pointer-events: none;
+}
+
+.timeline-item:last-child .timeline-line::before {
+  display: none;
+}
+
+/* ── Dot ────────────────────────────── */
+.timeline-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--card-border);
+  background: var(--card-bg);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.timeline-icon {
+  font-size: 14px;
+}
+
+/* Type colors */
+.timeline-item.education .timeline-dot {
+  border-color: rgba(6, 182, 212, 0.5);
+  background: rgba(6, 182, 212, 0.08);
+}
+
+.timeline-item.project .timeline-dot {
+  border-color: rgba(124, 58, 237, 0.5);
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.timeline-item.achievement .timeline-dot {
+  border-color: rgba(34, 197, 94, 0.5);
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.timeline-item.current .timeline-dot {
+  border-color: #ffb020;
+  background: rgba(255, 176, 32, 0.1);
+  box-shadow: 0 0 12px rgba(255, 176, 32, 0.3);
+}
+
+/* ── Content Card ───────────────────── */
+.timeline-content {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+
+.timeline-item.education .timeline-content {
+  border-color: rgba(6, 182, 212, 0.2);
+}
+
+.timeline-item.project .timeline-content {
+  border-color: rgba(124, 58, 237, 0.2);
+}
+
+.timeline-item.achievement .timeline-content {
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.timeline-item.current .timeline-content {
+  border-color: rgba(255, 176, 32, 0.3);
+  box-shadow: 0 0 20px rgba(255, 176, 32, 0.08);
+}
+
+.timeline-content:hover {
+  transform: translateX(4px);
+}
+
+.current-badge {
+  display: inline-block;
+  background: #ffb020;
+  color: #1a1a1a;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.timeline-subtitle {
+  font-family: monospace;
+  font-size: 11px;
+  color: #06b6d4;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.timeline-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+/* ── Mobile ─────────────────────────── */
+@media (max-width: 768px) {
+  .timeline-item {
+    grid-template-columns: 36px 1fr;
+    gap: 0 1rem;
+  }
+
+  .timeline-year {
+    display: none;
+  }
+
+  .timeline-line::before {
+    top: 36px;
+    height: calc(100% + 2.5rem);
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-title {
+    font-size: 0.95rem;
+  }
+
+  .timeline-desc {
+    font-size: 12px;
+  }
+
+  .timeline-container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .timeline-item {
+    grid-template-columns: 30px 1fr;
+    gap: 0 0.75rem;
+  }
+
+  .timeline-dot {
+    width: 30px;
+    height: 30px;
+  }
+
+  .timeline-icon {
+    font-size: 12px;
+  }
+}

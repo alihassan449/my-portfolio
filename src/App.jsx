@@ -8,6 +8,8 @@ import Contact         from './components/Contact'
 import Footer          from './components/Footer'
 import CursorFollower  from './components/CursorFollower'
 import ProjectDetail   from './components/ProjectDetail'
+import Timeline        from './components/Timeline'
+import BackToTop       from './components/BackToTop'
 
 function Home() {
   return (
@@ -16,9 +18,11 @@ function Home() {
       <Navbar />
       <Hero />
       <Skills />
+      <Timeline />
       <Projects />
       <Contact />
       <Footer />
+      <BackToTop />
     </div>
   )
 }

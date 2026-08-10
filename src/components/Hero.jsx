@@ -66,7 +66,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}
         >
-          Computer Science student at Your University.
+          Computer Science student at FAST NUCES, Lahore.
           Passionate about building intelligent systems and scalable web
           applications that solve real problems.
         </motion.p>
