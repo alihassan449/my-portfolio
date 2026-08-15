@@ -1,9 +1,13 @@
 import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import { projects } from './Projects'
 import './ProjectDetail.css'
 
 function ProjectDetail() {
   const { id } = useParams()
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [])
   const navigate = useNavigate()
   const project = projects.find(p => p.id === id)
 
@@ -20,9 +24,17 @@ function ProjectDetail() {
     <div className="detail-page">
       <div className="detail-container">
 
-        <button className="back-btn" onClick={() => navigate('/')}>
-          ← Back to Portfolio
-        </button>
+    <button className="back-btn" onClick={() => {
+      navigate('/')
+      setTimeout(() => {
+        const projects = document.getElementById('projects')
+        if (projects) {
+          projects.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 600)
+    }}>
+      ← Back to Portfolio
+    </button>
 
         <div className="detail-header">
           <div className="detail-badges">

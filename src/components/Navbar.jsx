@@ -5,10 +5,26 @@ import { useTheme } from '../ThemeContext'
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('hero')
   const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+
+      // Detect active section
+      const sections = ['hero', 'skills', 'timeline', 'projects', 'contact']
+      const scrollPos = window.scrollY + 100
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i])
+        if (el && el.offsetTop <= scrollPos) {
+          setActiveSection(sections[i])
+          break
+        }
+      }
+    }
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -22,12 +38,12 @@ function Navbar() {
 
       {/* Desktop Links */}
       <ul className="nav-links">
-  <li><a href="#hero">Home</a></li>
-  <li><a href="#skills">Skills</a></li>
-  <li><a href="#timeline">Timeline</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
+        <li><a href="#hero"     className={activeSection === 'hero'     ? 'active' : ''}>Home</a></li>
+        <li><a href="#skills"   className={activeSection === 'skills'   ? 'active' : ''}>Skills</a></li>
+        <li><a href="#timeline" className={activeSection === 'timeline' ? 'active' : ''}>Timeline</a></li>
+        <li><a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
+        <li><a href="#contact"  className={activeSection === 'contact'  ? 'active' : ''}>Contact</a></li>
+      </ul>
 
       {/* Theme Toggle */}
       <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
@@ -61,12 +77,12 @@ function Navbar() {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="mobile-menu">
-  <a href="#hero"      onClick={closeMenu}>Home</a>
-  <a href="#skills"    onClick={closeMenu}>Skills</a>
-  <a href="#timeline"  onClick={closeMenu}>Timeline</a>
-  <a href="#projects"  onClick={closeMenu}>Projects</a>
-  <a href="#contact"   onClick={closeMenu}>Contact</a>
-</div>
+          <a href="#hero"      className={activeSection === 'hero'     ? 'active' : ''} onClick={closeMenu}>Home</a>
+          <a href="#skills"    className={activeSection === 'skills'   ? 'active' : ''} onClick={closeMenu}>Skills</a>
+          <a href="#timeline"  className={activeSection === 'timeline' ? 'active' : ''} onClick={closeMenu}>Timeline</a>
+          <a href="#projects"  className={activeSection === 'projects' ? 'active' : ''} onClick={closeMenu}>Projects</a>
+          <a href="#contact"   className={activeSection === 'contact'  ? 'active' : ''} onClick={closeMenu}>Contact</a>
+        </div>
       )}
     </nav>
   )

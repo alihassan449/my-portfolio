@@ -1,0 +1,84 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  transform: scale(1.02);
+  pointer-events: none;
+}
+
+.loading-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Logo */
+.loading-logo {
+  font-family: monospace;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pulse-logo 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-logo {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Subtitle */
+.loading-subtitle {
+  font-family: monospace;
+  font-size: 13px;
+  color: #6b6b80;
+  letter-spacing: 0.1em;
+}
+
+/* Progress Bar */
+.loading-bar-wrap {
+  width: 200px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  border-radius: 99px;
+  transition: width 0.02s linear;
+}
+
+/* Percent */
+.loading-percent {
+  font-family: monospace;
+  font-size: 12px;
+  color: #06b6d4;
+  letter-spacing: 0.05em;
+}

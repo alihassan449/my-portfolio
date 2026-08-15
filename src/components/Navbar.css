@@ -52,6 +52,26 @@
   color: var(--text-primary);
 }
 
+.nav-links a.active {
+  color: #06b6d4;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  border-radius: 99px;
+}
+
+.mobile-menu a.active {
+  color: #06b6d4;
+}
+
 .hamburger {
   display: none;
   background: transparent;

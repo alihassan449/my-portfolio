@@ -6,7 +6,7 @@ const timelineData = [
     year: "2021",
     title: "Matriculation",
     subtitle: "Board of Intermediate & Secondary Education",
-    desc: "Secured 1100/1100 marks — a perfect score. This achievement laid the foundation for a strong academic journey ahead.",
+    desc: "Completed Matriculation with outstanding results. Built a strong academic foundation in sciences and mathematics.",
     type: "education",
     icon: "🎓"
   },
@@ -27,38 +27,6 @@ const timelineData = [
     icon: "🏛️"
   },
   {
-    year: "Fall 2023",
-    title: "Command-Based Drawing Tablet",
-    subtitle: "1st Semester Project — C++ & SFML",
-    desc: "Built a drawing tablet where users type commands like fd50, rt90, circle 100 and the system draws accordingly. First major project using Programming Fundamentals.",
-    type: "project",
-    icon: "🖥️"
-  },
-  {
-    year: "Fall 2024",
-    title: "Hospital Management System",
-    subtitle: "2nd Semester Project — C++ OOP",
-    desc: "Designed a full hospital system with Doctor, Patient, Admin, Nurse and Staff classes using Object Oriented Programming principles.",
-    type: "project",
-    icon: "🏥"
-  },
-  {
-    year: "Spring 2025",
-    title: "User Complaint System",
-    subtitle: "3rd Semester Project — Data Structures",
-    desc: "Built an efficient complaint management system using core Data Structures concepts like queues and linked lists for handling and prioritizing complaints.",
-    type: "project",
-    icon: "📋"
-  },
-  {
-    year: "Fall 2025",
-    title: "Typing Balloon Game",
-    subtitle: "4th Semester Project — Assembly Language",
-    desc: "Created a fun typing game in x86 Assembly Language (COAL) where players type words to pop balloons before they escape.",
-    type: "project",
-    icon: "🎮"
-  },
-  {
     year: "2025",
     title: "Joined Idyllic Youth Society",
     subtitle: "FAST NUCES — Member",
@@ -67,20 +35,14 @@ const timelineData = [
     icon: "🌟"
   },
   {
-    year: "Spring 2026",
-    title: "UnderstandDeen",
-    subtitle: "5th Semester Project — Full Stack Web App",
-    desc: "Built a complete Islamic web platform with Quran, Hadith, Fiqh rulings, AI chatbot, and Connect to Scholar feature. Fully integrated with SQL Server database.",
-    type: "project",
-    icon: "🕌"
-  },
-  {
-    year: "Spring 2026",
-    title: "AI Text Formality & Subjectivity Analyzer",
-    subtitle: "6th Semester Project — Python & TensorFlow",
-    desc: "Trained an ML model on 30,000+ multilingual sentences using Kaggle's T4 GPU to analyze and score text for formality and subjectivity.",
-    type: "project",
-    icon: "🤖"
+    year: "Jun–Jul 2026",
+    title: "Full Stack Development Intern",
+    subtitle: "Progree — 1 Month Internship",
+    desc: "Built three production-level projects: a responsive portfolio website using HTML5 and CSS Grid/Flexbox, a CRUD task dashboard connecting React to a Node.js/Express backend, and a secure e-commerce module with JWT authentication, hashed credentials, persistent shopping cart, and Stripe payment integration. Gained hands-on experience with async API calls, secure auth flows, and payment gateway integration.",
+    type: "internship",
+    icon: "💼",
+    certificate: "/internship-certificate.png",
+    lor: "/lor.png"
   },
   {
     year: "Summer 2026",
@@ -130,6 +92,26 @@ function Timeline() {
                   <h3 className="timeline-title">{item.title}</h3>
                   <p className="timeline-subtitle">{item.subtitle}</p>
                   <p className="timeline-desc">{item.desc}</p>
+                  {item.certificate && (
+                    <a
+                      href={item.certificate}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="certificate-btn"
+                    >
+                      View Certificate ↗
+                    </a>
+                  )}
+                  {item.lor && (
+                    <a
+                      href={item.lor}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="lor-btn"
+                    >
+                      View Letter of Recommendation ↗
+                    </a>
+                  )}
                 </div>
 
               </div>
