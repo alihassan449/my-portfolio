@@ -15,7 +15,7 @@ function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <span className="badge-dot"></span>
-          Available for internships
+          Open to Work — Full Stack & AI Developer
         </motion.div>
 
         {/* Glitch Name */}

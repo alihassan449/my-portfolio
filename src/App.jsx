@@ -12,6 +12,8 @@ import ProjectDetail   from './components/ProjectDetail'
 import Timeline        from './components/Timeline'
 import BackToTop       from './components/BackToTop'
 import NotFound        from './components/NotFound'
+import AskAli          from './components/AskAli'
+import ScrollProgress from './components/ScrollProgress'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -41,6 +43,7 @@ function PageWrapper({ children }) {
 function Home() {
   return (
     <PageWrapper>
+      <ScrollProgress />
       <CursorFollower />
       <Navbar />
       <Hero />
@@ -50,6 +53,7 @@ function Home() {
       <Contact />
       <Footer />
       <BackToTop />
+      <AskAli />
     </PageWrapper>
   )
 }
