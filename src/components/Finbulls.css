@@ -1,0 +1,180 @@
+.finbulls {
+  background: var(--bg);
+  padding: 6rem 2rem;
+  transition: background 0.3s ease;
+}
+
+.finbulls-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.finbulls-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  background: var(--card-bg);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.05);
+  align-items: center;
+}
+
+.finbulls-card:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.1);
+}
+
+/* Logo */
+.finbulls-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid var(--card-border);
+  height: fit-content;
+  align-self: center;
+}
+
+.finbulls-logo {
+  width: 100%;
+  max-width: 220px;
+  object-fit: contain;
+}
+
+/* Info */
+.finbulls-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Badges */
+.finbulls-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.finbulls-badge {
+  font-family: monospace;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.finbulls-badge.secp {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.finbulls-badge.fbr {
+  background: rgba(6, 182, 212, 0.1);
+  color: #06b6d4;
+  border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+.finbulls-badge.soon {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+/* Name & Tagline */
+.finbulls-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.finbulls-tagline {
+  font-family: monospace;
+  font-size: 13px;
+  color: #06b6d4;
+  letter-spacing: 0.05em;
+}
+
+/* Description */
+.finbulls-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+/* Services */
+.finbulls-services {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.finbulls-service {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.finbulls-service:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.service-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.service-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.service-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Footer */
+.finbulls-footer {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.finbulls-founded {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .finbulls-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .finbulls-logo-wrap {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}

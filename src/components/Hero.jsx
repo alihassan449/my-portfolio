@@ -15,7 +15,7 @@ function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <span className="badge-dot"></span>
-          Open to Work — Full Stack & AI Developer
+          Open to Internships & Job Opportunities
         </motion.div>
 
         {/* Glitch Name */}
@@ -48,6 +48,8 @@ function Hero() {
               1500,
               'Machine Learning Models.',
               1500,
+              'Investment Tools for PSX.',
+              1500,
               'Things that matter.',
               2000,
             ]}
@@ -66,9 +68,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}
         >
-          Computer Science student at FAST NUCES, Lahore.
-          Passionate about building intelligent systems and scalable web
-          applications that solve real problems.
+          Computer Science student at FAST NUCES, Lahore & Founder of Finbulls Equity — a registered PSX investment company. Passionate about building intelligent systems and scalable web applications that solve real problems.
         </motion.p>
 
         {/* Buttons */}

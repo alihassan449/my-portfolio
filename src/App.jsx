@@ -14,6 +14,7 @@ import BackToTop       from './components/BackToTop'
 import NotFound        from './components/NotFound'
 import AskAli          from './components/AskAli'
 import ScrollProgress from './components/ScrollProgress'
+import Finbulls from './components/Finbulls'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -49,6 +50,7 @@ function Home() {
       <Hero />
       <Skills />
       <Timeline />
+      <Finbulls />
       <Projects />
       <Contact />
       <Footer />

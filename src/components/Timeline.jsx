@@ -53,6 +53,14 @@ const timelineData = [
     icon: "📈",
     current: true
   },
+  {
+    year: "2026",
+    title: "Founder & Owner — Finbulls Equity",
+    subtitle: "Investment Company — Pakistan Stock Exchange (PSX)",
+    desc: "Founded Finbulls Equity, a registered investment company focused on investing in PSX-listed companies. Managing real investment portfolios and building AI-powered tools to support smarter investment decisions.",
+    type: "achievement",
+    icon: "🏢"
+  },
 ]
 
 function Timeline() {

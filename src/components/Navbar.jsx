@@ -13,7 +13,7 @@ function Navbar() {
       setScrolled(window.scrollY > 50)
 
       // Detect active section
-      const sections = ['hero', 'skills', 'timeline', 'projects', 'contact']
+      const sections = ['hero', 'skills', 'timeline', 'finbulls', 'projects', 'contact']
       const scrollPos = window.scrollY + 100
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -41,6 +41,7 @@ function Navbar() {
         <li><a href="#hero"     className={activeSection === 'hero'     ? 'active' : ''}>Home</a></li>
         <li><a href="#skills"   className={activeSection === 'skills'   ? 'active' : ''}>Skills</a></li>
         <li><a href="#timeline" className={activeSection === 'timeline' ? 'active' : ''}>Timeline</a></li>
+        <li><a href="#finbulls" className={activeSection === 'finbulls' ? 'active' : ''}>Company</a></li>
         <li><a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
         <li><a href="#contact"  className={activeSection === 'contact'  ? 'active' : ''}>Contact</a></li>
       </ul>
@@ -80,6 +81,7 @@ function Navbar() {
           <a href="#hero"      className={activeSection === 'hero'     ? 'active' : ''} onClick={closeMenu}>Home</a>
           <a href="#skills"    className={activeSection === 'skills'   ? 'active' : ''} onClick={closeMenu}>Skills</a>
           <a href="#timeline"  className={activeSection === 'timeline' ? 'active' : ''} onClick={closeMenu}>Timeline</a>
+          <a href="#finbulls" className={activeSection === 'finbulls' ? 'active' : ''} onClick={closeMenu}>Company</a>
           <a href="#projects"  className={activeSection === 'projects' ? 'active' : ''} onClick={closeMenu}>Projects</a>
           <a href="#contact"   className={activeSection === 'contact'  ? 'active' : ''} onClick={closeMenu}>Contact</a>
         </div>
